@@ -1,0 +1,32 @@
+﻿@*specifying the strongly typed model for this view*@
+@model HomeViewModel
+
+@*--specifying the layout in each view is also duplicating therefore it can be generalized using a viewstart file--*@
+@*specifying the layout that this view is going to use*@
+@*mvc will automatically look in the shared folder for a _Layout.cshtml file*@
+@*@{
+        Layout = "_Layout";
+    }*@
+
+@*accessing title from same viewbag which was set by the controller*@
+@*<h2>@ViewBag.Title</h2>*@
+
+<h2>@Model.Title</h2>
+
+@*accessing data from specified model above*@
+@foreach (var pie in Model.Pies)
+{
+<div class="col-sm-4 col-lg-4 col-md-4">
+    <div class="thumbnail">
+        <img src="@pie.ImageThumbnailUrl" alt="" />
+        <div class="caption">
+            <h3 class="pull-right">@pie.Price.ToString("c")</h3>
+            <h3>
+                @*using tag helpers to generate outgoing link/route*@
+                <a asp-controller="Home" asp-action="Details" asp-route-id="@pie.Id">@pie.Name</a>
+            </h3>
+            <p>@pie.ShortDescription</p>
+        </div>
+    </div>
+</div>
+}

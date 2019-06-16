@@ -1,0 +1,35 @@
+﻿@*layout files are used to avoid duplication of full html markup that will be used by multiple views*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/content/site.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">Bethany's Pie Shop</a></li>
+                    <li><a asp-controller="Feedback" asp-action="Index" class="navbar-brand">Feedback</a></li>
+
+                    @*partial view for login/logout/register scaffolded by Identity*@
+                    <partial name="_LoginPartial" />
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        <div class="row">
+            @*renderbody is a placeholder which will be replaced by the content of views*@
+            @RenderBody()
+        </div>
+    </div>
+    @*views can have multiple functionality blocks and each should be placed somewhere in the layout*@
+    @*RenderSection is a placeholder for those functionalities*@
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
