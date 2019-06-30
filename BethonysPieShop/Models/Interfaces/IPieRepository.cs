@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BethonysPieShop.Models.Interfaces
 {
-    public interface IPieRepository //repository class - single api that is open to the rest of the application which abstracts the pie implementation
+    public interface IPieRepository
     {
         IEnumerable<Pie> GetAllPies();
         Pie GetPieById(int id);

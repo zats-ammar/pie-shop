@@ -13,12 +13,12 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#line 6 "E:\Projects\ASP.Net\Core\BethonysPieShop\BethonysPieShop\Views\_ViewImports.cshtml"
+#line 3 "E:\Projects\ASP.Net\Core\BethonysPieShop\BethonysPieShop\Views\_ViewImports.cshtml"
 using BethonysPieShop.ViewModels;
 
 #line default
 #line hidden
-#line 7 "E:\Projects\ASP.Net\Core\BethonysPieShop\BethonysPieShop\Views\_ViewImports.cshtml"
+#line 4 "E:\Projects\ASP.Net\Core\BethonysPieShop\BethonysPieShop\Views\_ViewImports.cshtml"
 using BethonysPieShop.Models;
 
 #line default
@@ -29,7 +29,7 @@ using Microsoft.AspNetCore.Http.Features;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5c18f8c7ec540a446e15b225511cfa1a006e3ec3", @"/Views/Shared/_CookieConsentPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"af8bac6cbab7d103f92d69849af867b195dba2ec", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6cc7904fbd927a03e4d1fabb9ba99631545f12f2", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__CookieConsentPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

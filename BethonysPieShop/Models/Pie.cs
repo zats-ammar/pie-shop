@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BethonysPieShop.Models //MODEL = DOMAIN class(poco classes) + REPOSITORY class(interfaces)
+namespace BethonysPieShop.Models
 {
-    public class Pie //domain class - poco class defining our domain
+    public class Pie
     {
         public int Id { get; set; }
         public string Name { get; set; }

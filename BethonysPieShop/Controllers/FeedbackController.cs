@@ -15,10 +15,8 @@ namespace BethonysPieShop.Controllers
     public class FeedbackController : Controller
     {
 
-        //feedback controller of course will going to have a dependency on feedback repository
         private readonly IFeedbackRepository _feedBackRepository;
 
-        //and we inject that feedback repository dependency via constructor injection
         public FeedbackController(IFeedbackRepository feedbackRepository)
         {
             _feedBackRepository = feedbackRepository;
@@ -29,23 +27,19 @@ namespace BethonysPieShop.Controllers
             return View();
         }
 
-        //validation on model triggered when modelbinding is happening
-        //so before the index post method is going to be invoked
-        //when model binding happens a side product is been produced name ModelState
-        //ModelState includes all the errors of the model and an IsValid property
         [HttpPost]
-        public IActionResult Index(Feedback feedback)//from modelbinding form data became available to us via parameter without us having manually retrieve the data from form fields
+        public IActionResult Index(Feedback feedback)
         {
             if (ModelState.IsValid)
             {
-            _feedBackRepository.AddFeedback(feedback);
-            return RedirectToAction("FeedbackComplete");
+                _feedBackRepository.AddFeedback(feedback);
+                return RedirectToAction("FeedbackComplete");
             }
             else
             {
-                return View(feedback);//if form invalid return the form with errors
+                return View(feedback);
             }
-            
+
         }
 
         public IActionResult FeedbackComplete()

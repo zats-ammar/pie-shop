@@ -15,19 +15,16 @@ namespace BethonysPieShop
 {
     public class Program
     {
-        //1 Asp.net core app is like an console app. It has a Main method as entry point
         public static void Main(string[] args)
         {
-            //CreateWebHostBuilder(args).Build().Run();
             var host = CreateWebHostBuilder(args).Build();
 
-            //getting access to dependency injection container inside the Main method via the Services collection
             using (var scope = host.Services.CreateScope())
             {
-                var services = scope.ServiceProvider;//getting all services in scope
+                var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<AppDbContext>();//getting required context
+                    var context = services.GetRequiredService<AppDbContext>();
                     DbInitializer.Seed(context);
                 }
                 catch (Exception)
@@ -39,10 +36,8 @@ namespace BethonysPieShop
             host.Run();
         }
 
-        //2 creating the hosting environment behind the scenes
-        //this will create an internal web server(kestrel) and also the iis server
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args) //CreateDefaultBuilder() will create many defaults
+            WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
     }
 }

@@ -1,16 +1,13 @@
-﻿@*using strongly typed model with tag helpers in a form, we can do model binding and submit the form*@
-@model Feedback
+﻿@model Feedback
 
 <form asp-action="Index" method="post" class="form-horizontal" role="form">
 
-    @*all error messages from returned ModelState*@
     <div asp-validation-summary="All" class="text-danger"></div>
 
     <div class="form-group">
         <label asp-for="Name" class="col-md-2 control-label"></label>
         <div class="col-md-5">
             <input asp-for="Name" class="form-control" />
-            @*specific error messages from returned ModelState*@
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
     </div>

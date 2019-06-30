@@ -13,18 +13,18 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#line 6 "E:\Projects\ASP.Net\Core\BethonysPieShop\BethonysPieShop\Views\_ViewImports.cshtml"
+#line 3 "E:\Projects\ASP.Net\Core\BethonysPieShop\BethonysPieShop\Views\_ViewImports.cshtml"
 using BethonysPieShop.ViewModels;
 
 #line default
 #line hidden
-#line 7 "E:\Projects\ASP.Net\Core\BethonysPieShop\BethonysPieShop\Views\_ViewImports.cshtml"
+#line 4 "E:\Projects\ASP.Net\Core\BethonysPieShop\BethonysPieShop\Views\_ViewImports.cshtml"
 using BethonysPieShop.Models;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"320f8b8881b76ef3482c1ba535fac9ca0f42c79b", @"/Views/Home/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"af8bac6cbab7d103f92d69849af867b195dba2ec", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6cc7904fbd927a03e4d1fabb9ba99631545f12f2", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Pie>
     {
         #pragma warning disable 1998
